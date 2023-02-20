@@ -1,0 +1,5 @@
+datasource:
+  driverName: mysql
+  dataSourceName: root:02171027@(127.0.0.1:3306)/tiktok
+server:
+  port:8080
