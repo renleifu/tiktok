@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-redis/redis/v8"
-	. "tiktok/src/config"
+	. "tiktok/main/config"
 	"time"
 )
 
