@@ -84,6 +84,12 @@ type Video struct {
 	Title         string `gorm:"column:title"`
 }
 
+type Favorite struct {
+	Id     int64 `gorm:"column:id;primaryKey;autoIncrement:true"`
+	UserId int64 `gorm:"column: user_id"`
+	Video  int64 `gorm:"column: video_id"`
+}
+
 func (*Video) TableName() string {
 	return "video"
 }
