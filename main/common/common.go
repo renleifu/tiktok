@@ -10,18 +10,18 @@ type Response struct {
 }
 
 type User struct {
-	UserId          int64  `gorm:"column:user_id;primaryKey;autoIncrement:true"`
-	Name            string `gorm:"column:name"`
-	FollowCount     int64  `gorm:"column:follow_count"`
-	FollowerCount   int64  `gorm:"column:follower_count"`
-	IsFollow        bool   `gorm:"column:is_follow"`
-	Avatar          string `gorm:"column:avatar"`
-	BackgroundImage string `gorm:"column:background_image"`
-	Signature       string `gorm:"column:signature"`
-	TotalFavorited  int64  `gorm:"column:total_favorited"`
-	WorkCount       int64  `gorm:"column:work_count"`
-	FavoriteCount   int64  `gorm:"column:favorite_count"`
-	Password        string `gorm:"column:password"`
+	UserId          int64  `gorm:"column:user_id;primaryKey;autoIncrement:true" json:"user_id"`
+	Name            string `gorm:"column:name" json:"name"`
+	FollowCount     int64  `gorm:"column:follow_count" json:"follow_count"`
+	FollowerCount   int64  `gorm:"column:follower_count" json:"follower_count"`
+	IsFollow        bool   `gorm:"column:is_follow" json:"is_follow"`
+	Avatar          string `gorm:"column:avatar" json:"avatar"`
+	BackgroundImage string `gorm:"column:background_image" json:"background_image"`
+	Signature       string `gorm:"column:signature" json:"signature"`
+	TotalFavorited  int64  `gorm:"column:total_favorited" json:"total_favorited"`
+	WorkCount       int64  `gorm:"column:work_count" json:"work_count"`
+	FavoriteCount   int64  `gorm:"column:favorite_count" json:"favorite_count"`
+	Password        string `gorm:"column:password" json:"-"`
 }
 
 func (*User) TableName() string {
